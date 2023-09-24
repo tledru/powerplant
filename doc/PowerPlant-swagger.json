@@ -1,0 +1,116 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "PowerPlant.Host",
+      "version": "1.0"
+    },
+    "paths": {
+      "/ProductionPlan": {
+        "post": {
+          "tags": [
+            "ProductionPlan"
+          ],
+          "operationId": "ComputeProductionPlan",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComputeProductionPlanRequest"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComputeProductionPlanRequest"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComputeProductionPlanRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "400":{
+              "description": "Error"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ComputeProductionPlanRequest": {
+          "type": "object",
+          "properties": {
+            "load": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "fuels": {
+              "$ref": "#/components/schemas/FuelContext"
+            },
+            "powerPlants": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PowerPlant"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "FuelContext": {
+          "type": "object",
+          "properties": {
+            "gasPrice": {
+              "type": "number",
+              "format": "float"
+            },
+            "kerosinePrice": {
+              "type": "number",
+              "format": "float"
+            },
+            "co2Price": {
+              "type": "number",
+              "format": "float"
+            },
+            "windStrength": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          "additionalProperties": false
+        },
+        "PowerPlant": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "nullable": true
+            },
+            "type": {
+              "type": "string",
+              "nullable": true
+            },
+            "efficiency": {
+              "type": "number",
+              "format": "float"
+            },
+            "pmin": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pmax": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }

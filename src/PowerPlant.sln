@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPlant.Host", "PowerPla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPlant.Domain", "PowerPlant.Domain\PowerPlant.Domain.csproj", "{517748A4-3383-4A94-8EC5-0EC99D428842}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPlant.Tests", "PowerPlant.Tests\PowerPlant.Tests.csproj", "{7017BCE8-54DB-405C-B17C-56799A71BFF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{517748A4-3383-4A94-8EC5-0EC99D428842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{517748A4-3383-4A94-8EC5-0EC99D428842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{517748A4-3383-4A94-8EC5-0EC99D428842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7017BCE8-54DB-405C-B17C-56799A71BFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7017BCE8-54DB-405C-B17C-56799A71BFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7017BCE8-54DB-405C-B17C-56799A71BFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7017BCE8-54DB-405C-B17C-56799A71BFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

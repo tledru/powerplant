@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace PowerPlant.Domain
+﻿namespace PowerPlant.Domain
 {
     internal class PowerPlantCostComparer : IComparer<PowerPlant>
     {
